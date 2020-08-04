@@ -1,0 +1,19 @@
+
+text/x-generic .htaccess ( UTF-8 Unicode text )
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+RewriteBase /
+
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /public/
+RewriteRule ^public/(.*) /$1 [R=302,L]
+
+RewriteCond %{REQUEST_URI} ^/(.*)
+RewriteRule !^public/ public/%1
+
+
+</IfModule>
