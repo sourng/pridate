@@ -15,5 +15,12 @@ return [
 
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'login_info' =>'Join our community of mature singles and find a warm and meaningful connection!',
+    'home' =>'Home',
+	'Login' =>'Sign In',
+	'Register' =>'Sign Up',
+	'Get_Started' =>'Get Started',
+	'Remember me' =>'Remember me',
+	'Forgot Password?' =>'Forgot Password?',
 
 ];

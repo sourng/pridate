@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -42,16 +43,16 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item" style="margin-right: 15px;">
-                                <a class="btn btn-primary" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="btn btn-primary" href="{{ route('login') }}">{{ __('auth.Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="btn btn-success" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="btn btn-success" href="{{ route('register') }}">{{ __('auth.Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item" style="margin-right: 15px;">
-                                <a class="btn btn-success" href="{{ route('home') }}">{{ __('Home') }}</a>
+                             <a class="btn btn-success" href="{{ route('home') }}">{{ __('Home') }}{{__('auth.home')}}</a>
                             </li>
 
                             <li class="nav-item" style="margin-right: 15px;">

@@ -10,10 +10,21 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//for switching language route
+Route::get('locale/{locale}', function ($locale){
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
+
+//  Route::get('locale/{locale}', 'HomeController@lang');
+
+
 
 use App\Mail\NewUserWelcomeMail;
 
 Auth::routes();
+
+// Route::get('locale/{lang}', 'Locale@index');
 
 Route::get('/email', function () {
     return new NewUserWelcomeMail();
